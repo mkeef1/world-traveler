@@ -1,0 +1,18 @@
+extends ../shared/template
+block content
+  .col-xs-5
+    form(role='form', method='post', action='/vacations')
+      .form-group
+          label.sr-only Name
+          input(type='text', placeholder='Name')
+        .form-group
+          label From
+          input(type='text', placeholder='From')
+        .form-group
+          label.sr-only  To
+          input(type='text', placeholder='To')
+        button(type='submit') Submit
+  .col-xs-7
+
+block scripts
+  script(src='/js/user/new-vacation.js')
