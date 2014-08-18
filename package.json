@@ -1,7 +1,7 @@
 {
   "name": "world-traveler",
   "version": "0.0.0",
-  "description": "Node.js/Express Template",
+  "description": "World Traveler",
   "main": "app/index.js",
   "directories": {
     "test": "test"
