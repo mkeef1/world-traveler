@@ -1,0 +1,30 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name":"Nashville, TN, USA",
+  "start":{"$date":1407992400000},
+  "end":{"$date":409374800000},
+  "lat":36.166667,
+  "lng":-86.78333299999997,
+  "photos":["http://www.nashvillehomesbuylindaseaton.com/wp-content/uploads/2011/03/Nashville_TN.jpg"]
+}
+
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"Tokyo, Japan",
+  "start":{"$date":1410411600000},
+  "end":{"$date":1411621200000},
+  "lat":35.6894875,
+  "lng":139.69170639999993,
+  "photos":["http://images.china.cn/attachement/jpg/site1007/20081226/000bcdb95f1d0abe7f152c.jpg"]
+}
+
+{
+  "_id":{"$oid":"000000000000000000000003"},
+  "name":"Seattle, WA, USA",
+  "start":{"$date":1408510800000},
+  "end":{"$date":1409288400000},
+  "lat":47.6062095,
+  "lng":-122.3320708,
+  "photos":["http://media.royalcaribbean.com/content/shared_assets/images/ports/hero/SEA_01.jpg"]
+}
+
