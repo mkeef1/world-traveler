@@ -1,4 +1,6 @@
-/*global google:true */
+/* jshint unused:false, camelcase:false */
+/* global AmCharts:true, google:true */
+
 (function(){
   'use strict';
   var map;

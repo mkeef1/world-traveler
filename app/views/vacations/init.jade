@@ -2,15 +2,17 @@ extends ../shared/template
 block content
   .col-xs-5
     form(role='form', method='post', action='/vacations')
+      input#lat(type='hidden', name='lat')
+      input#lng(type='hidden', name='lng')
       .form-group
-          label.sr-only Name
-          input(type='text', placeholder='Name')
+          label(for='name') Vacation Name
+          input#name.form-control(type='text', name='name', placeholder='Vacation Name')
         .form-group
-          label From
-          input(type='text', placeholder='From')
+          label(for='from') From
+          input#from.form-control(type='text', name='from', placeholder='mm/dd/yyyy')
         .form-group
-          label.sr-only  To
-          input(type='text', placeholder='To')
+          label(for='to') To
+          input#to.form-control(type='text',name='to', placeholder='mm/dd/yyyy')
         button(type='submit') Submit
   .col-xs-7
 
