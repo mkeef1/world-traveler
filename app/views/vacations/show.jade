@@ -23,6 +23,7 @@ block content
                   td= vacation.lat.toFixed(8)
                   td= vacation.lng.toFixed(8)
                   td= vacation.photos.length
+
       .row
         .col-xs-12
           form(method='post', action='/vacations/#{vacation._id}/photos/new')
@@ -30,6 +31,10 @@ block content
               label(for='url') Photo URL
               input.form-control#url(type='text', name='url')
             button.btn.btn-success(type='submit') Add Photo
-
+  .row
+    each photo in vacation.photos
+      .col-md-4
+        img.img-thumbnail(src=photo)
+      .col-md-8
 block scripts
   script(src='/js/user/show.js')
