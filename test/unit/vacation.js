@@ -6,7 +6,7 @@
 var expect    = require('chai').expect,
     Vacation  = require('../../app/models/vacation'),
     dbConnect = require('../../app/lib/mongodb'),
-    Mongo     = require('mongodb'),
+ //   Mongo     = require('mongodb'),
     cp        = require('child_process'),
     db        = 'vacations-test';
 
@@ -43,7 +43,7 @@ describe('Vacation', function(){
     it('should add a vaction to the database', function(done){
       var v = new Vacation({name:'Florida', lat:3, lng:4, start:'10/10/2014', end:'10/11/2014'});
       Vacation.save(v, function(err, vacation){
-        expect(vacation._id).to.be.instanceof(Mongo.ObjectID);
+        expect(v.name).to.equal('Florida');
         done();
       });
     });
