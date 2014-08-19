@@ -6,7 +6,7 @@
 var expect    = require('chai').expect,
     Vacation  = require('../../app/models/vacation'),
     dbConnect = require('../../app/lib/mongodb'),
- //   Mongo     = require('mongodb'),
+    //Mongo     = require('mongodb'),
     cp        = require('child_process'),
     db        = 'vacations-test';
 
@@ -25,7 +25,7 @@ describe('Vacation', function(){
 
   describe('constructor', function(){
     it('should create a new vacation', function(){
-      var v = new Vacation({name:'Florida', lat:3, lng:4, start:'10/10/2014', end:'10/11/2014'});
+      var v = new Vacation({name:'Florida', lat:3, lng:4, start:'10/10/2014', end:'10/11/2014', photos:['a1.img', 'a2.img']});
       expect(v).to.be.instanceof(Vacation);
     });
   });
@@ -41,7 +41,7 @@ describe('Vacation', function(){
 
   describe('.save', function(){
     it('should add a vaction to the database', function(done){
-      var v = new Vacation({name:'Florida', lat:3, lng:4, start:'10/10/2014', end:'10/11/2014'});
+      var v = new Vacation({name:'Florida', lat:3, lng:4, start:'10/10/2014', end:'10/11/2014', photos:['a1', 'a2']});
       Vacation.save(v, function(err, vacation){
         expect(v.name).to.equal('Florida');
         done();
@@ -49,5 +49,13 @@ describe('Vacation', function(){
     });
   });
 
+  describe('.findById', function(){
+    it('should find a vacation by its id', function(done){
+      Vacation.findById('000000000000000000000001', function(vacation){
+        expect(vacation.name).to.equal('Nashville, TN, USA');
+        done();
+      });
+    });
+  });
 });
 
