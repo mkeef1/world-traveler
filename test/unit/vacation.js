@@ -51,7 +51,7 @@ describe('Vacation', function(){
 
   describe('.findById', function(){
     it('should find a vacation by its id', function(done){
-      Vacation.findById('000000000000000000000001', function(vacation){
+      Vacation.findById('000000000000000000000001', function(err, vacation){
         expect(vacation.name).to.equal('Nashville, TN, USA');
         done();
       });
